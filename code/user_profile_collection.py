@@ -145,6 +145,7 @@ class UserProfileCollector(DataCollector):
         all_user_ids = set()
 
         for choice in choices:
+            print("collecting {}".format(choice))
             all_user_ids.update(get_user_ids_in_folder(
                 "{}/{}/{}".format(self.config.dump_location, choice["news_source"], choice["label"])))
 
@@ -165,6 +166,7 @@ class UserTimelineTweetsCollector(DataCollector):
         all_user_ids = set()
 
         for choice in choices:
+            print("collecting {}".format(choice))
             all_user_ids.update(get_user_ids_in_folder(
                 "{}/{}/{}".format(self.config.dump_location, choice["news_source"], choice["label"])))
 
@@ -185,6 +187,7 @@ class UserFollowersCollector(DataCollector):
         all_user_ids = set()
 
         for choice in choices:
+            print("collecting {}".format(choice))
             all_user_ids.update(get_user_ids_in_folder(
                 "{}/{}/{}".format(self.config.dump_location, choice["news_source"], choice["label"])))
 
@@ -205,6 +208,7 @@ class UserFollowingCollector(DataCollector):
         all_user_ids = set()
 
         for choice in choices:
+            print("collecting {}".format(choice))
             all_user_ids.update(get_user_ids_in_folder(
                 "{}/{}/{}".format(self.config.dump_location, choice["news_source"], choice["label"])))
 

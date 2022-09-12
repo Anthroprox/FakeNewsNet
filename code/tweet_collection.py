@@ -76,5 +76,7 @@ class TweetCollector(DataCollector):
 
     def collect_data(self, choices):
         for choice in choices:
+            print("collecting {}".format(choice))
             news_list = self.load_news_file(choice)
             collect_tweets(news_list, choice["news_source"], choice["label"], self.config)
+            print("finishing collecting {}".format(choice))

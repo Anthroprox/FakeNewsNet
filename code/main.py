@@ -62,8 +62,10 @@ def download_dataset():
     data_collector_factory = DataCollectorFactory(config)
 
     for feature_type in data_features_to_collect:
+        print("collecting {}".format(feature_type))
         data_collector = data_collector_factory.get_collector_object(feature_type)
         data_collector.collect_data(data_choices)
+        print("finishing collecting {}".format(feature_type))
 
 
 if __name__ == "__main__":
