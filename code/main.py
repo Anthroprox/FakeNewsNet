@@ -69,4 +69,6 @@ def download_dataset():
 
 
 if __name__ == "__main__":
+    print("start collecting")
     download_dataset()
+    print("finish collecting")

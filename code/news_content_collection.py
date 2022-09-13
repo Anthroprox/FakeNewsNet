@@ -1,7 +1,7 @@
 import json
 import logging
 import time
-
+import sys
 import requests
 from tqdm import tqdm
 from newspaper import Article
@@ -129,7 +129,7 @@ def collect_news_articles(news_list, news_source, label, config: Config):
 
     save_dir = "{}/{}/{}".format(config.dump_location, news_source, label)
 
-    for news in tqdm(news_list):
+    for news in tqdm(news_list, file=sys.stdout):
         create_dir("{}/{}".format(save_dir, news.news_id))
         news_article = crawl_news_article(news.news_url)
         if news_article:
